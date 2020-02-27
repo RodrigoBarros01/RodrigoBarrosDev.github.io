@@ -52,3 +52,12 @@
   {
     text-align: center;
   }
+
+  .image {
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+.image:active {
+    -webkit-transform: rotate(360deg);
+}
