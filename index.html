@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <title>OHHHHH</title>
+    <title>O SITE MAIS ALEATORIO DE TODOS</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="animate.css">
 </head>
@@ -21,7 +22,7 @@
         </div>
         <div class="centraliza" hidden id="divResposta">
             <font face="verdana" size="10" color="white">
-                Não
+                <span id="textoResposta"></span>
             </font>
             <div style="margin-top: 20px;">
                 <input type="button" id="btnNovaConsulta" value="Nova consulta" class="wrapperBtn"
@@ -30,21 +31,67 @@
         </div>
     </div>
 
+
+
     <script>
-        var coisasASer = ['UMA ÁRVORE', 'UM ESQUILO', 'UMA CADEIRA', 'UM PEDAÇO DE AÇO INOX'];
+
+        var coisasASer =
+            [
+                'UMA ÁRVORE',
+                'UM ESQUILO',
+                'UMA CADEIRA',
+                'UM PEDAÇO DE AÇO INOX',
+                'UMA PIZZA',
+                'UM CACTO',
+                'UM URSO',
+                'UM APERITIVO',
+                'UMA SINFONIA',
+                'UM TRAILER',
+                'UMA RASTEIRA',
+                'UM BALANÇO',
+                'UM CUBO',
+                'O NATAL',
+                'O BILLY (O CACHORRO DO DESENVOLVEDOR)',
+                'UM INALADOR',
+                'A RÚSSIA',
+                'UMA TECPIX',
+                'VINAGRE',
+                'UM FONE DE OUVIDO'
+            ];
+
+        var respostas =
+            [
+                'Não',
+                'Talvez',
+                'As vezes',
+                'Sim',
+                'Será?',
+                'Quase',
+                'Apenas em dias múltiplos de ' + Math.random(),
+                'Não sei',
+                'Metade do tempo sim, a outra também',
+
+            ];
+
+
         var selecionado = coisasASer[Math.floor(Math.random() * coisasASer.length)];
         $("#textoOqSou").text(selecionado);
 
         function valida() {
+            var respostaSelecionada = respostas[Math.floor(Math.random() * respostas.length)];
+
+            $("#textoResposta").text(respostaSelecionada);
             $("#divEuSou").attr('hidden', true);
             $("#divResposta").removeAttr('hidden');
         }
+
+
+
         function novaConsulta() {
             var novoSelecionado = coisasASer[Math.floor(Math.random() * coisasASer.length)];
 
             var atualSelecionado = $("#textoOqSou").text();
-            while(atualSelecionado == novoSelecionado)
-            {
+            while (atualSelecionado == novoSelecionado) {
                 novoSelecionado = coisasASer[Math.floor(Math.random() * coisasASer.length)];
             }
 
@@ -52,6 +99,8 @@
             $("#divEuSou").removeAttr('hidden');
             $("#divResposta").attr('hidden', true);
         }
+
+
     </script>
 
 </body>
