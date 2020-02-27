@@ -1,59 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <title>OHHHHH</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="animate.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>aaaa</title>
 </head>
-
 <body>
-    <div class="wrapper">
-        <div class="centraliza" id="divEuSou">
-            <font face="verdana" size="10" color="white">
-                EU SOU <span id="textoOqSou"></span> ?
-            </font>
-
-            <div style="margin-top: 20px;">
-                <input type="button" id="btnValida" value="Validar" class="wrapperBtn"
-                    style="color: aliceblue; font-size: 30px;" onclick="valida()">
-            </div>
-        </div>
-        <div class="centraliza" hidden id="divResposta">
-            <font face="verdana" size="10" color="white">
-                Não
-            </font>
-            <div style="margin-top: 20px;">
-                <input type="button" id="btnNovaConsulta" value="Nova consulta" class="wrapperBtn"
-                    style="color: aliceblue; font-size: 30px;" onclick="novaConsulta()">
-            </div>
-        </div>
-    </div>
-
-    <script>
-        var coisasASer = ['UMA ÁRVORE', 'UM ESQUILO', 'UMA CADEIRA', 'UM PEDAÇO DE AÇO INOX'];
-        var selecionado = coisasASer[Math.floor(Math.random() * coisasASer.length)];
-        $("#textoOqSou").text(selecionado);
-
-        function valida() {
-            $("#divEuSou").attr('hidden', true);
-            $("#divResposta").removeAttr('hidden');
-        }
-        function novaConsulta() {
-            var novoSelecionado = coisasASer[Math.floor(Math.random() * coisasASer.length)];
-
-            var atualSelecionado = $("#textoOqSou").text();
-            while(atualSelecionado == novoSelecionado)
-            {
-                novoSelecionado = coisasASer[Math.floor(Math.random() * coisasASer.length)];
-            }
-
-            $("#textoOqSou").text(novoSelecionado);
-            $("#divEuSou").removeAttr('hidden');
-            $("#divResposta").attr('hidden', true);
-        }
-    </script>
-
+    <h1>aaa</h1>
 </body>
-
 </html>
