@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>O SITE MAIS ALEATORIO DE TODOS</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="centraliza" id="divEuSou">
-            <font face="verdana" size="10" color="white">
-                EU SOU <span id="textoOqSou"></span> ?
-            </font>
+    <div class="row wrapper">
+        <div class="col-md-4" id="myAnimation">
+            <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2018/09/nicolas-cage-meme-1210x544.jpg" style="width: 100%; height: 50%;">
+            <input type="button" value="faça a magia acontecer" onclick="myMove()">
+        </div>
+        <div class="col-md-4">
+            <div style="margin-top: 50px;">
+                <div id="divEuSou">
+                    <font face="verdana" size="10" color="white">
+                        EU SOU <span id="textoOqSou"></span> ?
+                    </font>
 
-            <div style="margin-top: 20px;">
-                <input type="button" id="btnValida" value="Validar" class="wrapperBtn"
-                    style="color: aliceblue; font-size: 30px;" onclick="valida()">
+                    <div style="margin-top: 20px;">
+                        <input type="button" id="btnValida" value="Validar" class="wrapperBtn"
+                            style="color: aliceblue; font-size: 30px;" onclick="valida()">
+                    </div>
+                </div>
+                <div hidden id="divResposta">
+                    <font face="verdana" size="10" color="white">
+                        <span id="textoResposta"></span>
+                    </font>
+                    <div style="margin-top: 20px;">
+                        <input type="button" id="btnNovaConsulta" value="Nova consulta" class="wrapperBtn"
+                            style="color: aliceblue; font-size: 30px;" onclick="novaConsulta()">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="centraliza" hidden id="divResposta">
-            <font face="verdana" size="10" color="white">
-                <span id="textoResposta"></span>
-            </font>
-            <div style="margin-top: 20px;">
-                <input type="button" id="btnNovaConsulta" value="Nova consulta" class="wrapperBtn"
-                    style="color: aliceblue; font-size: 30px;" onclick="novaConsulta()">
-            </div>
-        </div><marquee>
-        <iframe src="https://open.spotify.com/embed/album/6gPoMchca8cwaSr7v5coCx?si=HcXDxZeeTwq8RvG-nE2YYg" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </marquee></div>
+        
+        <div class="col-md-4">
+            <iframe src="https://open.spotify.com/embed/album/6gPoMchca8cwaSr7v5coCx?si=HcXDxZeeTwq8RvG-nE2YYg"
+                width="100%" height="400px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
     <script>
+
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 300) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
 
         var coisasASer =
             [
