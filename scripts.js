@@ -74,7 +74,6 @@ function novaConsulta() {
     $("#divResposta").attr('hidden', true);
 }
 
-
 function carregaJogoDaCobra()
 {
     var canvas = document.getElementById('game');
